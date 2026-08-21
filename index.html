@@ -281,10 +281,18 @@
   }
   .prod-card{
     background:linear-gradient(180deg,#FFF8F3,#F9EDE6);
-    border-radius:18px;padding:22px 16px;text-align:center;
+    border-radius:18px;padding:14px;text-align:center;
     border:1px solid #F3E2D8;
+    overflow:hidden;
   }
   .prod-card .label{font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--rose-deep);margin-top:10px;}
+  .prod-card img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:12px;
+    display:block;
+  }
   .prod-card svg{width:min(170px,100%);height:auto;}
   .prod-feature{
     display:flex;gap:14px;padding:16px 0;border-bottom:1px solid #F3E2D8;
@@ -713,60 +721,19 @@
     <div class="product-grid">
       <div class="product-gallery">
         <div class="prod-card">
-          <svg viewBox="0 0 200 260" aria-hidden="true">
-            <defs>
-              <linearGradient id="pf1" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#8E3B5C"/><stop offset="100%" stop-color="#45102E"/>
-              </linearGradient>
-            </defs>
-            <rect x="28" y="40" width="144" height="52" rx="20" fill="#7A2A4A"/>
-            <path d="M38 90 C38 130, 44 156, 60 178 L72 188 L84 176 L84 226 C84 238, 90 244, 100 244 C110 244, 116 238, 116 226 L116 176 L128 188 C144 166, 162 140, 162 90 Z" fill="url(#pf1)"/>
-            <path d="M84 176 L100 186 L116 176 L128 188" stroke="#4A1630" stroke-width="1.6" fill="none" opacity=".6"/>
-          </svg>
+          <img src="https://raw.githubusercontent.com/edsonhirama/short-cinta-modelador/main/assets/img/frente.webp" alt="Short Cinta Modelador - Vista de Frente" width="500" height="500" loading="lazy" decoding="async">
           <div class="label">Frente</div>
         </div>
         <div class="prod-card">
-          <svg viewBox="0 0 200 260" aria-hidden="true">
-            <defs>
-              <linearGradient id="pf2" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#7A2A4A"/><stop offset="100%" stop-color="#3A0E24"/>
-              </linearGradient>
-            </defs>
-            <rect x="28" y="40" width="144" height="52" rx="20" fill="#5E1F3A"/>
-            <path d="M38 90 C38 130, 44 156, 60 178 L72 188 L84 176 L84 226 C84 238, 90 244, 100 244 C110 244, 116 238, 116 226 L116 176 L128 188 C144 166, 162 140, 162 90 Z" fill="url(#pf2)"/>
-            <path d="M58 92 C120 86, 150 88, 162 90" stroke="#C25A78" stroke-width="2.2" fill="none" opacity=".7"/>
-            <path d="M58 120 C120 114, 150 116, 162 120" stroke="#C25A78" stroke-width="2.2" fill="none" opacity=".7"/>
-            <path d="M84 176 L100 186 L116 176 L128 188" stroke="#3A0E24" stroke-width="1.6" fill="none" opacity=".7"/>
-          </svg>
+          <img src="https://raw.githubusercontent.com/edsonhirama/short-cinta-modelador/main/assets/img/costas.webp" alt="Short Cinta Modelador - Vista de Costas" width="500" height="500" loading="lazy" decoding="async">
           <div class="label">Costas</div>
         </div>
         <div class="prod-card">
-          <svg viewBox="0 0 200 260" aria-hidden="true">
-            <defs>
-              <linearGradient id="pf3" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#8E3B5C"/><stop offset="100%" stop-color="#45102E"/>
-              </linearGradient>
-            </defs>
-            <rect x="28" y="40" width="144" height="52" rx="20" fill="#7A2A4A"/>
-            <path d="M38 90 C38 130, 44 156, 60 178 L72 188 L84 176 L84 226 C84 238, 90 244, 100 244 C110 244, 116 238, 116 226 L116 176 L128 188 C144 166, 162 140, 162 90 Z" fill="url(#pf3)"/>
-            <path d="M38 100 C90 92, 128 92, 162 96" stroke="#C25A78" stroke-width="2.4" fill="none" opacity=".7"/>
-            <path d="M38 128 C90 120, 128 120, 162 124" stroke="#C25A78" stroke-width="2.4" fill="none" opacity=".7"/>
-          </svg>
+          <img src="https://raw.githubusercontent.com/edsonhirama/short-cinta-modelador/main/assets/img/laterais.webp" alt="Short Cinta Modelador - Vista Lateral" width="500" height="500" loading="lazy" decoding="async">
           <div class="label">Laterais</div>
         </div>
         <div class="prod-card">
-          <svg viewBox="0 0 200 260" aria-hidden="true">
-            <defs>
-              <linearGradient id="pf4" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#8E3B5C"/><stop offset="100%" stop-color="#45102E"/>
-              </linearGradient>
-            </defs>
-            <rect x="28" y="40" width="144" height="52" rx="20" fill="#7A2A4A"/>
-            <path d="M38 90 C38 130, 44 156, 60 178 L72 188 L84 176 L84 226 C84 238, 90 244, 100 244 C110 244, 116 238, 116 226 L116 176 L128 188 C144 166, 162 140, 162 90 Z" fill="url(#pf4)"/>
-            <path d="M38 70 L162 70" stroke="#E8CF8A" stroke-width="2.5" stroke-dasharray="6 5" opacity=".9"/>
-            <circle cx="100" cy="66" r="7" fill="#C9A227"/>
-            <text x="100" y="69" text-anchor="middle" font-size="8" font-weight="800" fill="#45102E">4X</text>
-          </svg>
+          <img src="https://raw.githubusercontent.com/edsonhirama/short-cinta-modelador/main/assets/img/Estrutura%204%20barbatanas.webp" alt="Short Cinta Modelador - Estrutura 4 barbatanas" width="500" height="500" loading="lazy" decoding="async">
           <div class="label">Estrutura 4 barbatanas</div>
         </div>
       </div>
