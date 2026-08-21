@@ -149,6 +149,10 @@
     filter:blur(6px);border-radius:50%;
   }
   .hero-visual svg{position:relative;width:min(340px,86%);height:auto;filter:drop-shadow(0 26px 40px rgba(107,33,70,.28));}
+  .hero-product{
+    position:relative;width:min(340px,86%);margin:0 auto;display:block;
+    border-radius:24px;box-shadow:0 26px 60px rgba(107,33,70,.25);
+  }
 
   /* ================= BENEFITS STRIP ================= */
   .benefits-strip{background:var(--white);border-top:1px solid #F0E2D9;border-bottom:1px solid #F0E2D9;}
@@ -494,64 +498,7 @@
 
     <div class="hero-visual">
       <div class="halo"></div>
-      <!-- Short Cinta Modelador -->
-      <svg viewBox="0 0 400 520" role="img" aria-label="Short Cinta Modelador">
-        <defs>
-          <linearGradient id="shortBody" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#8E3B5C"/>
-            <stop offset="55%" stop-color="#6B2146"/>
-            <stop offset="100%" stop-color="#45102E"/>
-          </linearGradient>
-          <linearGradient id="waistG" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#A43E63"/>
-            <stop offset="100%" stop-color="#7A2A4A"/>
-          </linearGradient>
-          <linearGradient id="bandG" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#E8CF8A"/>
-            <stop offset="50%" stop-color="#C9A227"/>
-            <stop offset="100%" stop-color="#E8CF8A"/>
-          </linearGradient>
-        </defs>
-
-        <!-- waistband -->
-        <rect x="98" y="118" width="204" height="72" rx="26" fill="url(#waistG)"/>
-        <!-- band highlight -->
-        <rect x="98" y="150" width="204" height="10" fill="url(#bandG)" opacity=".9"/>
-        <text x="200" y="140" text-anchor="middle" font-family="Playfair Display, serif" font-weight="700" font-size="17" fill="#F7E3B2" letter-spacing="2">CINTA MODELADOR</text>
-
-        <!-- short body -->
-        <path d="M112 186
-                 C112 260, 120 302, 148 342
-                 L166 362
-                 L184 348
-                 L184 468
-                 C184 490, 192 500, 207 500
-                 C222 500, 230 490, 230 468
-                 L230 348
-                 L248 362
-                 C276 322, 288 280, 288 186
-                 Z"
-              fill="url(#shortBody)"/>
-
-        <!-- side barbatanas (left) -->
-        <path d="M112 220 C150 214, 260 214, 288 220" stroke="#C25A78" stroke-width="3" fill="none" opacity=".75"/>
-        <!-- side barbatanas (right) -->
-        <path d="M112 252 C150 246, 260 246, 288 252" stroke="#C25A78" stroke-width="3" fill="none" opacity=".75"/>
-
-        <!-- center seam -->
-        <path d="M200 186 C196 260, 200 330, 207 366" stroke="#4A1630" stroke-width="2.5" fill="none" opacity=".6"/>
-
-        <!-- front barbatanas vertical lines -->
-        <path d="M148 186 C146 260, 150 330, 158 360" stroke="#C25A78" stroke-width="2.5" fill="none" opacity=".6"/>
-        <path d="M252 186 C254 260, 250 330, 242 360" stroke="#C25A78" stroke-width="2.5" fill="none" opacity=".6"/>
-
-        <!-- seam shading -->
-        <path d="M184 348 L200 366 L216 348 L230 362" stroke="#4A1630" stroke-width="2" fill="none" opacity=".5"/>
-
-        <!-- hem band -->
-        <path d="M184 458 C192 478, 218 478, 230 458" stroke="#7A2A4A" stroke-width="6" fill="none"/>
-        <path d="M166 352 C176 366, 200 380, 230 362" stroke="#7A2A4A" stroke-width="4" fill="none" opacity=".8"/>
-      </svg>
+      <img class="hero-product" src="assets/img/hero.webp" alt="Short Cinta Modelador" loading="eager">
     </div>
   </div>
 </section>
@@ -643,7 +590,7 @@
 <section class="section">
   <div class="container id-grid">
     <div class="id-visual">
-      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=900&auto=format&fit=crop" alt="Mulher elegante sorrindo" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#F3D8DC,#E8CF8A)'">
+      <img src="assets/img/secao-2.webp" alt="Mulher elegante usando o Short Cinta Modelador" loading="lazy">
     </div>
     <div class="id-text">
       <span class="eyebrow">Feita para você</span>
