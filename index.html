@@ -462,12 +462,32 @@
       linear-gradient(135deg,var(--plum-dark) 0%,#5A1B3C 55%,var(--plum) 100%);
     color:#fff;position:relative;overflow:hidden;
   }
+  /* ================= URGENCY / SCARCITY BAR ================= */
+  .urgency-bar{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    background:rgba(227,194,90,.16);border:1px solid var(--gold);
+    color:#F7E3B2;font-size:clamp(12px,2.4vw,14px);font-weight:700;
+    padding:10px 22px;border-radius:999px;margin-bottom:28px;
+    box-shadow:0 6px 18px rgba(0,0,0,.25);
+  }
+  .urgency-bar strong{color:#fff;}
+  .kit-colors{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    margin-bottom:14px;font-size:12px;color:#F3DCE6;font-weight:600;
+  }
+  .color-dot{
+    display:inline-block;width:12px;height:12px;border-radius:50%;
+    border:1.5px solid rgba(255,255,255,.8);vertical-align:middle;margin-right:2px;
+  }
+  .color-dot--black{background:#1a1a1a;}
+  .color-dot--nude{background:#DEB887;}
+
   .kits-grid{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
     gap:24px;
     align-items:stretch;
-    margin-top:36px;
+    margin-top:16px;
   }
   .kit-card{
     background:rgba(255,255,255,.07);
@@ -928,6 +948,34 @@
   </div>
 </section>
 
+<!-- ============ HOW IT WORKS (EFEITO INSTANTÂNEO EM 3 PASSOS) ============ -->
+<section class="section product-section">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Mecanismo comprovado</span>
+      <h2 class="section-title">Como funciona o efeito instantâneo</h2>
+      <p class="section-sub">Entenda como o Short Cinta modela a silhueta em apenas 3 passos simples.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="num">01</div>
+        <h3>Vista com Suavidade</h3>
+        <p>O tecido inteligente com compressão anatômica desliza suavemente pelo corpo, vestindo do tamanho 38 ao 56 com total conforto.</p>
+      </div>
+      <div class="how-step">
+        <div class="num">02</div>
+        <h3>Modelagem Instantânea</h3>
+        <p>Suaviza a linha do abdômen, desenha a cintura e empina o bumbum na mesma hora, reduzindo medidas visuais sob a roupa.</p>
+      </div>
+      <div class="how-step">
+        <div class="num">03</div>
+        <h3>Conforto o Dia Todo</h3>
+        <p>As 4 barbatanas estruturais de aço flexível sustentam a postura e impedem que a peça enrole na cintura ou desça ao sentar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ DEMO VIDEO ============ -->
 <section class="section demo-section">
   <div class="container demo-wrap">
@@ -1288,6 +1336,7 @@
 <section class="section offer-main" id="ofertas">
   <div class="container">
     <div class="center">
+      <div class="urgency-bar">⏰ <strong>Lote Promocional com Frete Grátis:</strong> Restam poucas unidades para envio hoje.</div>
       <span class="eyebrow eyebrow-light">Escolha o seu Kit</span>
       <h2 class="section-title" style="color:#fff;">Selecione a melhor opção para você</h2>
       <p class="section-sub" style="color:#F3DCE6;">Aproveite o Frete Grátis e pague somente no momento da entrega.</p>
@@ -1305,6 +1354,12 @@
           <div class="kit-unit-price">R$ 119,90 por unidade</div>
         </div>
 
+        <div class="kit-colors">
+          <span class="color-dot color-dot--black"></span>
+          <span class="color-dot color-dot--nude"></span>
+          Cores: Preto ou Nude
+        </div>
+
         <div class="kit-pay-tag">
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12H7"/><path d="M11 8l-4 4 4 4"/><path d="M3 5v14"/></svg>
           Pague na Entrega
@@ -1312,6 +1367,7 @@
 
         <ul class="kit-features">
           <li><span class="check">✓</span> <span><strong>1 Short Cinta Modelador</strong></span></li>
+          <li><span class="check">✓</span> <span>Tamanho à sua escolha (38 ao 56)</span></li>
           <li><span class="check">✓</span> <span>4 Barbatanas Estruturais</span></li>
           <li><span class="check">✓</span> <span>Frete Grátis para todo Brasil</span></li>
           <li><span class="check">✓</span> <span>Pagamento somente na entrega</span></li>
@@ -1330,7 +1386,13 @@
         <div class="kit-price-box" style="border-color:rgba(201,162,39,.35);background:rgba(255,255,255,.12);">
           <div class="kit-price-old">De R$ 239,80</div>
           <div class="kit-price-now gold">R$ 159,90</div>
-          <div class="kit-unit-price" style="color:#F7E3B2;font-weight:800;">Apenas R$ 79,95 por unidade!</div>
+          <div class="kit-unit-price" style="color:#F7E3B2;font-weight:800;">Apenas R$ 79,95/un • Economize R$ 79,80!</div>
+        </div>
+
+        <div class="kit-colors">
+          <span class="color-dot color-dot--black"></span>
+          <span class="color-dot color-dot--nude"></span>
+          Cores: Preto + Nude ou 2 iguais
         </div>
 
         <div class="kit-pay-tag" style="background:rgba(201,162,39,.2);border-color:var(--gold);color:var(--gold-light);">
@@ -1340,6 +1402,7 @@
 
         <ul class="kit-features">
           <li><span class="check" style="color:var(--gold);">✓</span> <span><strong>2 Short Cinta Modelador</strong></span></li>
+          <li><span class="check" style="color:var(--gold);">✓</span> <span>Tamanhos e cores à sua escolha (38 ao 56)</span></li>
           <li><span class="check" style="color:var(--gold);">✓</span> <span>4 Barbatanas Estruturais</span></li>
           <li><span class="check" style="color:var(--gold);">✓</span> <span><strong>Frete Grátis com Prioridade</strong></span></li>
           <li><span class="check" style="color:var(--gold);">✓</span> <span>Pagamento somente na entrega</span></li>
@@ -1358,7 +1421,13 @@
         <div class="kit-price-box">
           <div class="kit-price-old">De R$ 359,70</div>
           <div class="kit-price-now">R$ 229,90</div>
-          <div class="kit-unit-price">Apenas R$ 76,63 por unidade!</div>
+          <div class="kit-unit-price" style="color:#A8E0C0;font-weight:800;">Apenas R$ 76,63/un • Economize R$ 129,80!</div>
+        </div>
+
+        <div class="kit-colors">
+          <span class="color-dot color-dot--black"></span>
+          <span class="color-dot color-dot--nude"></span>
+          Cores: Mix Preto & Nude
         </div>
 
         <div class="kit-pay-tag">
@@ -1368,6 +1437,7 @@
 
         <ul class="kit-features">
           <li><span class="check">✓</span> <span><strong>3 Short Cinta Modelador</strong></span></li>
+          <li><span class="check">✓</span> <span>Tamanhos e cores à sua escolha (38 ao 56)</span></li>
           <li><span class="check">✓</span> <span>4 Barbatanas Estruturais</span></li>
           <li><span class="check">✓</span> <span>Frete Grátis com Prioridade</span></li>
           <li><span class="check">✓</span> <span>Pagamento somente na entrega</span></li>
@@ -1403,33 +1473,6 @@
     </div>
     <div class="obj-visual">
       <img src="https://raw.githubusercontent.com/edsonhirama/short-cinta-modelador/main/assets/img/entrega.webp" alt="Entrega garantida com pagamento na entrega" width="1024" height="1024" loading="lazy" decoding="async">
-    </div>
-  </div>
-</section>
-
-<!-- ============ HOW IT WORKS ============ -->
-<section class="section product-section">
-  <div class="container">
-    <div class="center">
-      <span class="eyebrow">Simples assim</span>
-      <h2 class="section-title">Como funciona</h2>
-    </div>
-    <div class="how-steps">
-      <div class="how-step">
-        <div class="num">01</div>
-        <h3>Clique na oferta</h3>
-        <p>Clique no botão.</p>
-      </div>
-      <div class="how-step">
-        <div class="num">02</div>
-        <h3>Finalize seu pedido</h3>
-        <p>Você será direcionada ao checkout oficial.</p>
-      </div>
-      <div class="how-step">
-        <div class="num">03</div>
-        <h3>Receba e pague na entrega</h3>
-        <p>Receba sua encomenda e faça o pagamento na entrega, conforme as condições da oferta.</p>
-      </div>
     </div>
   </div>
 </section>
