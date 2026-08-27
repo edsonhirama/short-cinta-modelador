@@ -158,39 +158,48 @@
     background:
       radial-gradient(1200px 600px at 85% -10%, rgba(194,90,120,.22), transparent 60%),
       linear-gradient(180deg,#FBF2ED 0%, #F7E9E2 60%, #FBF6F0 100%);
-    padding:56px 0 64px;
+    padding:48px 0 56px;
   }
   .hero-grid{
-    display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;
+    display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;
   }
-  .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px;}
+  .hero-social-proof{
+    display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;
+    background:#fff;border:1px solid #F0D5DE;border-radius:999px;
+    padding:6px 14px;font-size:12px;color:var(--plum-dark);
+    margin-bottom:16px;box-shadow:0 4px 14px rgba(107,33,70,.06);
+  }
+  .hero-social-proof .stars{color:#FFB800;font-size:13px;letter-spacing:1px;}
+  .hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;}
   .badge-pill{
-    font-size:12px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;
-    padding:8px 14px;border-radius:999px;
+    font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;
+    padding:7px 13px;border-radius:999px;
   }
   .badge-combo{background:var(--plum);color:#fff;}
   .badge-frete{background:var(--gold-light);color:#6b4e00;}
   .badge-pay{background:var(--green);color:#fff;}
   .hero h1{
-    font-size:clamp(30px,5.4vw,52px);font-weight:800;line-height:1.15;
-    color:var(--plum-dark);margin-bottom:18px;
+    font-size:clamp(28px,4.8vw,48px);font-weight:800;line-height:1.15;
+    color:var(--plum-dark);margin-bottom:16px;
   }
-  .hero h1 em{font-style:italic;color:var(--rose-deep);}
+  .hero h1 em{display:block;font-style:italic;color:var(--rose-deep);font-weight:700;}
   .hero-sub{
-    font-size:clamp(15px,2.2vw,19px);color:#6b4f5b;font-weight:500;
-    max-width:520px;margin-bottom:26px;
+    font-size:clamp(15px,2.1vw,18px);color:#6b4f5b;font-weight:500;
+    max-width:520px;margin-bottom:22px;line-height:1.45;
   }
   .hero-offer{
-    display:flex;flex-direction:column;gap:8px;margin-bottom:26px;
+    display:flex;flex-direction:column;gap:6px;margin-bottom:22px;
+    background:rgba(255,255,255,.6);border:1px solid #EEDCD5;
+    border-radius:18px;padding:16px 20px;
   }
   .offer-line{
     font-family:'Playfair Display',serif;font-weight:800;color:var(--plum-dark);
     line-height:1.15;
   }
-  .offer-line--big{font-size:clamp(26px,5vw,44px);}
-  .offer-line--sub{font-size:clamp(20px,3.6vw,32px);color:var(--rose-deep);}
-  .offer-line--pay{font-size:clamp(20px,3.4vw,30px);color:var(--green);}
-  .offer-line--frete{font-size:clamp(16px,2.6vw,22px);color:var(--gold);}
+  .offer-line--big{font-size:clamp(22px,4vw,34px);}
+  .offer-line--sub{font-size:clamp(17px,3vw,26px);color:var(--rose-deep);}
+  .offer-line--pay{font-size:clamp(17px,2.8vw,24px);color:var(--green);}
+  .offer-line--frete{font-size:clamp(14px,2.2vw,18px);color:var(--gold);}
   .hero-cta-row{display:flex;flex-direction:column;align-items:flex-start;gap:8px;}
   .hero-visual{position:relative;text-align:center;}
   .hero-visual .halo{
@@ -199,13 +208,80 @@
     background:radial-gradient(circle,rgba(201,162,39,.28),rgba(194,90,120,.14) 55%,transparent 70%);
     filter:blur(6px);border-radius:50%;
   }
-  .hero-visual img{
+  .hero-media-wrap{
     position:relative;
-    width:min(400px,88%);
-    height:auto;
+    width:100%;
+    max-width:360px;
+    margin:0 auto;
     border-radius:24px;
-    filter:drop-shadow(0 20px 40px rgba(107,33,70,.25));
-    display:inline-block;
+    overflow:hidden;
+    box-shadow:0 24px 50px rgba(107,33,70,.22);
+    border:3px solid #fff;
+    background:#1a0a12;
+  }
+  .hero-media-wrap .video-frame{
+    border-radius:20px;
+  }
+  .hero-video-badge{
+    position:absolute;
+    bottom:14px;
+    left:50%;
+    transform:translateX(-50%);
+    background:rgba(69,16,46,.88);
+    color:#F7E3B2;
+    font-size:11px;
+    font-weight:800;
+    padding:6px 14px;
+    border-radius:999px;
+    white-space:nowrap;
+    backdrop-filter:blur(4px);
+    z-index:3;
+    pointer-events:none;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+  }
+
+  /* ================= TRUST BADGES STRIP ================= */
+  .trust-strip{
+    background:#fff;border-top:1px solid #F0E2D9;border-bottom:1px solid #F0E2D9;
+    padding:20px 0;
+  }
+  .trust-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:center;
+  }
+  .trust-item{
+    display:flex;align-items:center;gap:12px;
+  }
+  .trust-icon{
+    font-size:26px;flex:none;
+  }
+  .trust-title{
+    font-size:14px;font-weight:800;color:var(--plum-dark);line-height:1.2;
+  }
+  .trust-desc{
+    font-size:12px;color:var(--muted);line-height:1.2;
+  }
+
+  /* ================= IMMEDIATE OBJECTION SOLVER ================= */
+  .quick-obj-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:32px;
+  }
+  .quick-obj-card{
+    background:#fff;border:1px solid #F0E2D9;border-radius:20px;
+    padding:24px 18px;text-align:center;
+    box-shadow:0 8px 24px rgba(107,33,70,.06);
+    transition:transform .2s ease;
+  }
+  .quick-obj-card:hover{
+    transform:translateY(-3px);
+  }
+  .quick-obj-card .q-icon{
+    font-size:32px;margin-bottom:12px;
+  }
+  .quick-obj-card h3{
+    font-size:16px;font-weight:800;color:var(--plum-dark);margin-bottom:8px;line-height:1.25;
+  }
+  .quick-obj-card p{
+    font-size:13px;color:var(--muted);line-height:1.45;
   }
 
   /* ================= BENEFITS STRIP ================= */
@@ -686,15 +762,22 @@
     .hero-grid,.id-grid,.obj-grid,.product-grid{grid-template-columns:1fr;}
     .hero-visual{order:-1;}
     .strip-grid{grid-template-columns:1fr 1fr;}
+    .trust-grid{grid-template-columns:1fr 1fr;gap:16px;}
+    .quick-obj-grid{grid-template-columns:1fr 1fr;gap:16px;}
     .pay-steps,.how-steps{grid-template-columns:1fr;}
     .barb-cards,.benefit-grid,.wear-grid{grid-template-columns:1fr 1fr;}
     .kits-grid{grid-template-columns:1fr;max-width:440px;margin:32px auto 0;gap:32px;}
     .kit-card--featured{transform:none;}
     .kit-card--featured:hover{transform:translateY(-4px);}
-    .hero{padding-top:40px;}
+    .hero{padding-top:36px;}
   }
   @media (max-width:640px){
-    .section{padding:48px 0;}
+    .section{padding:44px 0;}
+    .trust-grid{grid-template-columns:1fr 1fr;gap:12px;}
+    .trust-title{font-size:12px;}
+    .trust-desc{font-size:11px;}
+    .trust-icon{font-size:22px;}
+    .quick-obj-grid{grid-template-columns:1fr;gap:14px;}
     .barb-cards,.benefit-grid,.wear-grid{grid-template-columns:1fr;}
     .barb-legend{grid-template-columns:repeat(2,1fr);}
     .obj-check{font-size:15px;}
@@ -712,7 +795,7 @@
 
 <!-- ============ TOP BAR ============ -->
 <header class="topbar">
-  Compre 1 e Leve 2 &nbsp;•&nbsp; Frete Grátis &nbsp;•&nbsp; <strong>Pagamento na Entrega</strong>
+  ⭐ 4.8/5 ESTRELAS &nbsp;•&nbsp; +15.000 CLIENTES &nbsp;•&nbsp; FRETE GRÁTIS &nbsp;•&nbsp; <strong>PAGUE NA ENTREGA</strong>
 </header>
 
 <main>
@@ -720,32 +803,127 @@
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-text">
+      <div class="hero-social-proof">
+        <span class="stars">★★★★★</span>
+        <span><strong>4.8/5</strong> (2.341 avaliações)</span>
+        <span>•</span>
+        <span><strong>15.000+</strong> mulheres satisfeitas</span>
+      </div>
+
       <div class="hero-badges">
         <span class="badge-pill badge-combo">Compre 1 e Leve 2</span>
         <span class="badge-pill badge-frete">Frete Grátis</span>
-        <span class="badge-pill badge-pay">Pagamento na Entrega</span>
+        <span class="badge-pill badge-pay">Pague na Entrega</span>
       </div>
-      <h1>Valorize sua <em>silhueta</em> e sinta-se mais confiante ao se vestir</h1>
-      <p class="hero-sub">Leve <strong>2 unidades do Short Cinta Modelador</strong> por apenas <strong>R$ 159,90</strong>, com frete grátis e pagamento na entrega.</p>
+
+      <h1>Short Cinta Modelador <em>Silhueta Modelada em 30 Segundos</em></h1>
+      <p class="hero-sub">Modela o abdômen e empina o bumbum instantaneamente sem marcar. <strong>Não enrola ao sentar</strong> graças às suas 4 barbatanas anatômicas. Peça agora e <strong>pague somente na entrega</strong>.</p>
 
       <div class="hero-offer">
         <span class="offer-line offer-line--big">COMPRE 1 E LEVE 2</span>
-        <span class="offer-line offer-line--sub">2 UNIDADES POR R$ 159,90</span>
+        <span class="offer-line offer-line--sub">2 UNIDADES POR R$ 159,90 (R$ 79,95/un)</span>
         <span class="offer-line offer-line--pay">PAGAMENTO NA ENTREGA</span>
-        <span class="offer-line offer-line--frete">FRETE GRÁTIS</span>
+        <span class="offer-line offer-line--frete">FRETE GRÁTIS PARA TODO O BRASIL</span>
       </div>
 
       <div class="hero-cta-row">
-        <a class="btn" href="#ofertas">Quero aproveitar a oferta</a>
+        <a class="btn btn-gold" href="#ofertas">Quero Testar sem Risco — Pagar na Entrega</a>
         <div class="btn-cta-line">
-          <span>1, 2 ou 3 unidades</span><span>•</span><span>A partir de R$ 119,90</span><span>•</span><span>Frete grátis</span><span>•</span><span>Pagamento na entrega</span>
+          <span>Entrega em 3 a 5 dias</span><span>•</span><span>Pague na entrega</span><span>•</span><span>Devolva grátis em 7 dias</span>
         </div>
       </div>
     </div>
 
     <div class="hero-visual">
       <div class="halo"></div>
-      <img src="https://raw.githubusercontent.com/edsonhirama/short-cinta-modelador/main/assets/img/hero.webp" alt="Short Cinta Modelador - Compre 1 Leve 2" width="1024" height="1024" fetchpriority="high" decoding="async" loading="eager">
+      <div class="hero-media-wrap">
+        <div class="video-frame video-9x16">
+          <iframe 
+            src="https://www.youtube.com/embed/aAzWE_bRQx8?autoplay=1&mute=1&loop=1&playlist=aAzWE_bRQx8&playsinline=1&controls=1&rel=0&modestbranding=1" 
+            title="Demonstração do Short Cinta Modelador em 10 segundos" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen 
+            loading="eager">
+          </iframe>
+          <div class="hero-video-badge">▶️ Resultado Instantâneo • 10s</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST BADGES STRIP ============ -->
+<section class="trust-strip">
+  <div class="container trust-grid">
+    <div class="trust-item">
+      <span class="trust-icon">⭐</span>
+      <div>
+        <div class="trust-title">4.8/5 Estrelas</div>
+        <div class="trust-desc">2.341 avaliações verificadas</div>
+      </div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">✅</span>
+      <div>
+        <div class="trust-title">15.000+ Clientes</div>
+        <div class="trust-desc">Mulheres satisfeitas no Brasil</div>
+      </div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">📦</span>
+      <div>
+        <div class="trust-title">Frete Grátis</div>
+        <div class="trust-desc">Entrega em 3 a 5 dias úteis</div>
+      </div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">💯</span>
+      <div>
+        <div class="trust-title">Devolva Grátis</div>
+        <div class="trust-desc">Garantia total de 7 dias</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IMMEDIATE OBJECTION SOLVER ============ -->
+<section class="section quick-objections-section">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Sem dúvidas ou insegurança</span>
+      <h2 class="section-title">Por que o Short Cinta é a escolha perfeita?</h2>
+      <p class="section-sub">Tudo o que você precisa saber antes de receber seu pedido em mãos.</p>
+    </div>
+
+    <div class="quick-obj-grid">
+      <div class="quick-obj-card">
+        <div class="q-icon">📏</div>
+        <h3>Veste do 38 ao 56</h3>
+        <p>Tecido inteligente com alta elasticidade anatômica (P, M, G, GG e Plus Size) que molda as curvas com total conforto sem sufocar.</p>
+      </div>
+
+      <div class="quick-obj-card">
+        <div class="q-icon">🔒</div>
+        <h3>4 Barbatanas Anti-Enrolamento</h3>
+        <p>Hastes flexíveis de sustentação que mantêm o short perfeitamente no lugar, garantindo que a cintura não enrole ou dobre ao sentar.</p>
+      </div>
+
+      <div class="quick-obj-card">
+        <div class="q-icon">👗</div>
+        <h3>100% Invisível sob a Roupa</h3>
+        <p>Lycra e Poliamida hipoalergênica, respirável e sem costuras grossas para usar com segurança sob vestidos, saias ou calças.</p>
+      </div>
+
+      <div class="quick-obj-card">
+        <div class="q-icon">🤝</div>
+        <h3>Pague Somente na Entrega</h3>
+        <p>Peça agora sem pagar nada adiantado. Você só paga ao entregador quando receber o pacote em casa + garantia incondicional de 7 dias.</p>
+      </div>
+    </div>
+
+    <div class="center mt-28">
+      <a class="btn btn-gold" href="#ofertas">Quero Testar sem Risco — Pagar na Entrega</a>
+      <div class="btn-cta-line"><span>Kits a partir de R$ 119,90</span><span>•</span><span>Frete grátis</span><span>•</span><span>Devolução grátis em 7 dias</span></div>
     </div>
   </div>
 </section>
@@ -1266,52 +1444,52 @@
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-q" id="faq-btn-1" type="button" aria-expanded="false" aria-controls="faq-ans-1">
-          <span>Quantas unidades recebo?</span>
+          <span>Funciona mesmo ou é só ilusão de óptica?</span>
           <span class="pm" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a" id="faq-ans-1" role="region" aria-labelledby="faq-btn-1"><p>Você pode escolher entre os kits de 1, 2 ou 3 unidades, com descontos progressivos e frete grátis para todo o Brasil.</p></div>
+        <div class="faq-a" id="faq-ans-1" role="region" aria-labelledby="faq-btn-1"><p>Funciona de verdade! A compressão anatômica com 4 barbatanas estruturais redistribui suavemente a silhueta, reduz medidas visuais no abdômen, empina o bumbum e alinha a postura no mesmo instante em que você veste.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" id="faq-btn-2" type="button" aria-expanded="false" aria-controls="faq-ans-2">
-          <span>Quanto custa?</span>
+          <span>Quais tamanhos estão disponíveis? Veste Plus Size?</span>
           <span class="pm" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a" id="faq-ans-2" role="region" aria-labelledby="faq-btn-2"><p>Temos opções a partir de R$ 119,90 (1 unidade), R$ 159,90 (2 unidades - Compre 1 Leve 2) e R$ 229,90 (3 unidades - Maior economia com máximo desconto).</p></div>
+        <div class="faq-a" id="faq-ans-2" role="region" aria-labelledby="faq-btn-2"><p>Sim! O tecido inteligente com alta elasticidade anatômica veste confortavelmente do tamanho 38 ao 56 (P, M, G, GG e Plus Size), adaptando-se às suas curvas sem apertar ou sufocar.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" id="faq-btn-3" type="button" aria-expanded="false" aria-controls="faq-ans-3">
-          <span>O frete é grátis?</span>
+          <span>Fica visível ou marca por baixo da roupa?</span>
           <span class="pm" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a" id="faq-ans-3" role="region" aria-labelledby="faq-btn-3"><p>Sim. Todos os kits possuem frete grátis para todo o Brasil.</p></div>
+        <div class="faq-a" id="faq-ans-3" role="region" aria-labelledby="faq-btn-3"><p>Não! O acabamento é ultrafino, liso e sem costuras grossas, garantindo que o short fique 100% discreto e invisível mesmo sob vestidos justos, saias, calças ou tecidos finos.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" id="faq-btn-4" type="button" aria-expanded="false" aria-controls="faq-ans-4">
-          <span>Preciso pagar antes de receber?</span>
+          <span>Posso usar todo dia sem machucar a pele ou enrolar?</span>
           <span class="pm" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a" id="faq-ans-4" role="region" aria-labelledby="faq-btn-4"><p>Não. A oferta possui pagamento na entrega, conforme as condições do pedido.</p></div>
+        <div class="faq-a" id="faq-ans-4" role="region" aria-labelledby="faq-btn-4"><p>Com certeza. O material é hipoalergênico e respirável, e as 4 barbatanas de sustentação impedem que a peça enrole na cintura ou desça ao sentar e levantar.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" id="faq-btn-5" type="button" aria-expanded="false" aria-controls="faq-ans-5">
-          <span>Quando faço o pagamento?</span>
+          <span>Se não servir ou eu não gostar, vocês realmente devolvem?</span>
           <span class="pm" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a" id="faq-ans-5" role="region" aria-labelledby="faq-btn-5"><p>O pagamento acontece na entrega, conforme as condições da oferta.</p></div>
+        <div class="faq-a" id="faq-ans-5" role="region" aria-labelledby="faq-btn-5"><p>Sim! Você tem 7 dias de garantia incondicional após o recebimento. Se não gostar ou precisar trocar, você devolve grátis e reembolsamos 100% do seu valor.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" id="faq-btn-6" type="button" aria-expanded="false" aria-controls="faq-ans-6">
-          <span>O produto possui barbatanas?</span>
+          <span>Quanto tempo leva para o meu pedido chegar?</span>
           <span class="pm" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a" id="faq-ans-6" role="region" aria-labelledby="faq-btn-6"><p>Sim. Possui 4 barbatanas estruturais.</p></div>
+        <div class="faq-a" id="faq-ans-6" role="region" aria-labelledby="faq-btn-6"><p>O frete é grátis para todo o Brasil, com prazo de entrega estimado entre 3 a 5 dias úteis e código de rastreamento enviado no seu e-mail.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" id="faq-btn-7" type="button" aria-expanded="false" aria-controls="faq-ans-7">
-          <span>Onde faço meu pedido?</span>
+          <span>Como funciona o Pagamento na Entrega (COD)?</span>
           <span class="pm" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a" id="faq-ans-7" role="region" aria-labelledby="faq-btn-7"><p>Escolha o kit desejado nesta página e clique no botão para acessar o checkout oficial.</p></div>
+        <div class="faq-a" id="faq-ans-7" role="region" aria-labelledby="faq-btn-7"><p>Você faz seu pedido hoje sem pagar nada antecipado. O pagamento só é realizado diretamente ao entregador no momento em que a encomenda chegar na sua casa.</p></div>
       </div>
     </div>
   </div>
