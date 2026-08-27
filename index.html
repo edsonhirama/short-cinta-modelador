@@ -46,6 +46,101 @@
 <link rel="preload" as="image" href="https://raw.githubusercontent.com/edsonhirama/short-cinta-modelador/main/assets/img/hero.webp" type="image/webp" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+<!-- Schema.org Structured Data (Product + AggregateRating + FAQPage) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Short Cinta Modelador",
+      "image": "https://raw.githubusercontent.com/edsonhirama/short-cinta-modelador/main/assets/img/hero.webp",
+      "description": "Short Cinta Modelador com 4 barbatanas estruturais anti-enrolamento. Modela o abdômen e empina o bumbum instantaneamente sem marcar. Veste do 38 ao 56.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Brasil Cintas"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "2341",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "119.90",
+        "highPrice": "229.90",
+        "priceCurrency": "BRL",
+        "offerCount": "3",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Funciona mesmo ou é só ilusão de óptica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Funciona de verdade! A compressão anatômica com 4 barbatanas estruturais redistribui suavemente a silhueta, reduz medidas visuais no abdômen, empina o bumbum e alinha a postura no mesmo instante em que você veste."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais tamanhos estão disponíveis? Veste Plus Size?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! O tecido inteligente com alta elasticidade anatômica veste confortavelmente do tamanho 38 ao 56 (P, M, G, GG e Plus Size), adaptando-se às suas curvas sem apertar ou sufocar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Fica visível ou marca por baixo da roupa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não! O acabamento é ultrafino, liso e sem costuras grossas, garantindo que o short fique 100% discreto e invisível mesmo sob vestidos justos, saias, calças ou tecidos finos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso usar todo dia sem machucar a pele ou enrolar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Com certeza. O material é hipoalergênico e respirável, e as 4 barbatanas de sustentação impedem que a peça enrole na cintura ou desça ao sentar e levantar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Se não servir ou eu não gostar, vocês realmente devolvem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Você tem 7 dias de garantia incondicional após o recebimento. Se não gostar ou precisar trocar, você devolve grátis e reembolsamos 100% do seu valor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo leva para o meu pedido chegar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O frete é grátis para todo o Brasil, com prazo de entrega estimado entre 3 a 5 dias úteis e código de rastreamento enviado no seu e-mail."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona o Pagamento na Entrega (COD)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Você faz seu pedido hoje sem pagar nada antecipado. O pagamento só é realizado diretamente ao entregador no momento em que a encomenda chegar na sua casa."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 <style>
   :root{
     --cream:#FBF6F0;
@@ -455,6 +550,111 @@
     padding:7px 14px;border-radius:999px;backdrop-filter:blur(3px);
   }
 
+  /* ================= SECTION: SIZE GUIDE (TABELA DE MEDIDAS) ================= */
+  .size-guide-section{
+    background:linear-gradient(180deg,#FBF6F0 0%,#F7E9E2 100%);
+    border-top:1px solid #F0E2D9;
+    border-bottom:1px solid #F0E2D9;
+  }
+  .size-table-card{
+    max-width:820px;
+    margin:32px auto 0;
+    background:#fff;
+    border:1px solid #F0E2D9;
+    border-radius:24px;
+    padding:clamp(20px,4vw,36px);
+    box-shadow:0 16px 40px rgba(107,33,70,.07);
+  }
+  .size-table-responsive{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    border-radius:16px;
+    border:1px solid #F2E3DC;
+  }
+  .size-table{
+    width:100%;
+    border-collapse:collapse;
+    text-align:center;
+    font-size:clamp(13px,2.2vw,15px);
+  }
+  .size-table th{
+    background:linear-gradient(135deg,var(--plum-dark),var(--plum));
+    color:#fff;
+    padding:16px 14px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.8px;
+    font-size:12px;
+  }
+  .size-table td{
+    padding:16px 14px;
+    border-bottom:1px solid #F4E8E2;
+    color:var(--plum-dark);
+    font-weight:600;
+  }
+  .size-table tr:nth-child(even) td{
+    background:#FDF9F6;
+  }
+  .size-table tr:hover td{
+    background:#F9ECE5;
+  }
+  .size-table .size-badge{
+    display:inline-block;
+    background:var(--rose-light);
+    color:var(--rose-deep);
+    font-weight:800;
+    padding:4px 12px;
+    border-radius:999px;
+    font-size:13px;
+  }
+  .size-recommend-box{
+    margin-top:20px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#FBF3E8;
+    border:1px solid #EEDBBF;
+    border-radius:14px;
+    padding:14px 18px;
+    font-size:13px;
+    color:#7A5510;
+    font-weight:600;
+    line-height:1.4;
+  }
+  .size-tips-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    margin-top:24px;
+  }
+  .size-tip-item{
+    background:#FAFAF9;
+    border:1px solid #EDE8E4;
+    border-radius:16px;
+    padding:16px;
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    text-align:left;
+  }
+  .size-tip-item .icon{
+    font-size:22px;
+    flex:none;
+    margin-top:2px;
+  }
+  .size-tip-item h4{
+    font-size:14px;
+    font-weight:800;
+    color:var(--plum-dark);
+    margin-bottom:4px;
+  }
+  .size-tip-item p{
+    font-size:12px;
+    color:var(--muted);
+    line-height:1.4;
+    margin:0;
+  }
+
   /* ================= SECTION: MAIN OFFER (3 KITS) ================= */
   .offer-main{
     background:
@@ -543,6 +743,47 @@
     color:#fff;
     margin-bottom:4px;
   }
+  .kit-subtext{
+    font-size:11px;
+    color:#D9BFCA;
+    margin-top:8px;
+    font-weight:600;
+  }
+  .kit-save-pill{
+    display:inline-block;
+    background:rgba(46,204,113,.22);
+    border:1px solid #2ECC71;
+    color:#58D68D;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.5px;
+    text-transform:uppercase;
+    padding:4px 10px;
+    border-radius:999px;
+    margin-top:6px;
+  }
+  .offer-trust-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:16px;
+    max-width:860px;
+    margin:36px auto 0;
+    padding-top:28px;
+    border-top:1px solid rgba(255,255,255,.15);
+  }
+  .offer-trust-item{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:14px;
+    padding:14px 16px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-align:left;
+  }
+  .offer-trust-item .ot-icon{font-size:24px;flex:none;}
+  .offer-trust-item .ot-title{font-size:13px;font-weight:800;color:#fff;}
+  .offer-trust-item .ot-desc{font-size:11px;color:#F3DCE6;margin-top:2px;}
   .kit-subtitle{
     font-size:13px;
     color:#F7E3B2;
@@ -798,6 +1039,7 @@
     .trust-desc{font-size:11px;}
     .trust-icon{font-size:22px;}
     .quick-obj-grid{grid-template-columns:1fr;gap:14px;}
+    .size-tips-grid{grid-template-columns:1fr;gap:12px;}
     .barb-cards,.benefit-grid,.wear-grid{grid-template-columns:1fr;}
     .barb-legend{grid-template-columns:repeat(2,1fr);}
     .obj-check{font-size:15px;}
@@ -1030,35 +1272,35 @@
 <!-- ============ PAYMENT ON DELIVERY (big highlight) ============ -->
 <section class="pay-hero section">
   <div class="container center">
-    <span class="eyebrow eyebrow-light">Segurança para o seu pedido</span>
-    <h2 class="section-title">Você não precisa pagar antes de receber</h2>
-    <p class="section-sub">Sabemos que comprar pela internet pode gerar insegurança. Nesta oferta, você faz seu pedido e o pagamento acontece na entrega, conforme as condições da oferta.</p>
+    <span class="eyebrow eyebrow-light">Zero risco para você</span>
+    <h2 class="section-title">Você não precisa pagar nada antes de receber</h2>
+    <p class="section-sub">Sabemos que comprar pela primeira vez na internet pode gerar desconfiança. Por isso, você só realiza o pagamento quando o pacote for entregue na sua casa.</p>
 
-    <div class="pay-hero-title">PAGAMENTO NA ENTREGA</div>
+    <div class="pay-hero-title">PAGAMENTO 100% NA ENTREGA</div>
 
     <div class="pay-steps">
       <div class="pay-step">
         <div class="num">01</div>
-        <h3>Faça seu pedido</h3>
-        <p>Clique no botão e realize seu pedido.</p>
+        <h3>Peça sem Pagar Nada</h3>
+        <p>Escolha seu kit em 30 segundos com Frete Grátis. Você não precisa digitar dados de cartão.</p>
       </div>
       <div class="pay-step">
         <div class="num">02</div>
-        <h3>Receba</h3>
-        <p>Aguarde sua encomenda.</p>
+        <h3>Acompanhe o Envio</h3>
+        <p>Receba o código de rastreamento no seu e-mail e acompanhe a entrega rápida em 3 a 5 dias úteis.</p>
       </div>
       <div class="pay-step">
         <div class="num">03</div>
-        <h3>Pague na entrega</h3>
-        <p>O pagamento acontece na entrega, conforme as condições da oferta.</p>
+        <h3>Pague Somente ao Receber</h3>
+        <p>Receba o pacote em mãos e realize o pagamento diretamente ao entregador (Pix ou Dinheiro).</p>
       </div>
     </div>
 
     <div class="pay-note">
-      <h3>Mais tranquilidade para fazer seu pedido</h3>
-      <a class="btn" href="#ofertas">Ver opções de kits</a>
+      <h3>Faça seu pedido com total tranquilidade e segurança</h3>
+      <a class="btn btn-gold" href="#ofertas">Quero Testar sem Risco — Pagar na Entrega</a>
       <div class="btn-cta-line btn-cta-line-light">
-        <span>1, 2 ou 3 unidades</span><span>•</span><span>A partir de R$ 119,90</span><span>•</span><span>Frete grátis</span><span>•</span><span>Pagamento na entrega</span>
+        <span>Kits a partir de R$ 119,90</span><span>•</span><span>Frete grátis</span><span>•</span><span>Devolução grátis em 7 dias</span>
       </div>
     </div>
   </div>
@@ -1071,13 +1313,13 @@
       <img src="https://raw.githubusercontent.com/edsonhirama/short-cinta-modelador/main/assets/img/secao%202.webp" alt="Mulher elegante sentindo-se confiante com o Short Cinta Modelador" width="720" height="1280" loading="lazy" decoding="async">
     </div>
     <div class="id-text">
-      <span class="eyebrow">Feita para você</span>
-      <h2 class="section-title">Uma peça para você se sentir bem com as roupas que gosta</h2>
-      <p>Sabe aquela roupa que você gosta, mas gostaria que tivesse um caimento ainda mais bonito? O <strong>Short Cinta Modelador</strong> foi desenvolvido para ajudar a deixar o visual mais alinhado, proporcionando sensação de firmeza e mais confiança ao se vestir.</p>
-      <p>Pensado para acompanhar o corpo com elegância e naturalidade, é o tipo de peça que faz diferença no dia a dia e em ocasiões especiais.</p>
+      <span class="eyebrow">Feita para mulheres reais</span>
+      <h2 class="section-title">Volte a usar suas roupas favoritas com total segurança e elegância</h2>
+      <p>Sabe aquele vestido especial, aquela saia ou calça que você ama, mas deixou guardada no armário por receio de marcar a barriguinha ou apertar a cintura?</p>
+      <p>O <strong>Short Cinta Modelador</strong> foi criado pensando exatamente na mulher madura que valoriza sua beleza natural e não abre mão do conforto. Ele desenha a silhueta, alinha a postura e valoriza o bumbum sem sufocar, sem enrolar e sem deixar marcas sob a roupa.</p>
       <div class="mt-20">
-        <a class="btn" href="#ofertas">Garantir minha oferta</a>
-        <div class="btn-cta-line"><span>Frete grátis</span><span>•</span><span>Pagamento na entrega</span></div>
+        <a class="btn btn-gold" href="#ofertas">Quero Redescobrir Minha Silhueta</a>
+        <div class="btn-cta-line"><span>Frete grátis Brasil</span><span>•</span><span>Pagamento somente na entrega</span></div>
       </div>
     </div>
   </div>
@@ -1214,39 +1456,40 @@
 <section class="section">
   <div class="container">
     <div class="center">
-      <span class="eyebrow">Vantagens</span>
-      <h2 class="section-title">Por que escolher o Short Cinta Modelador?</h2>
+      <span class="eyebrow">Transformação real</span>
+      <h2 class="section-title">Por que você vai se apaixonar pelo Short Cinta?</h2>
+      <p class="section-sub">Desenvolvido especialmente para proporcionar a modelagem perfeita com o conforto que você merece.</p>
     </div>
     <div class="benefit-grid">
       <div class="benefit-card">
         <div class="ic">💃</div>
-        <h3>Valoriza a silhueta</h3>
-        <p>Ajuda a criar aparência visualmente mais alinhada sob as roupas.</p>
+        <h3>Abdômen Retinho sem Sufocar</h3>
+        <p>Compressão anatômica inteligente que disfarça a barriguinha e desenha a cintura instantaneamente, sem apertar ou machucar.</p>
       </div>
       <div class="benefit-card">
-        <div class="ic">🧱</div>
-        <h3>Mais firmeza</h3>
-        <p>A estrutura proporciona sensação de firmeza durante o uso.</p>
+        <div class="ic">🍑</div>
+        <h3>Efeito Levanta Bumbum</h3>
+        <p>Corte especial que acomoda e valoriza as curvas femininas de forma natural, sem achatar ou marcar.</p>
       </div>
       <div class="benefit-card">
-        <div class="ic">🦴</div>
-        <h3>4 barbatanas</h3>
-        <p>Estrutura diferenciada para maior sustentação da peça.</p>
+        <div class="ic">🔒</div>
+        <h3>4 Barbatanas Anti-Enrolamento</h3>
+        <p>Hastes flexíveis de suporte que mantêm o short perfeitamente no lugar. Não dobra e não desce ao sentar ou levantar.</p>
       </div>
       <div class="benefit-card">
         <div class="ic">👗</div>
-        <h3>Versátil</h3>
-        <p>Pode ser usado com diferentes tipos de roupas.</p>
+        <h3>100% Invisível sob a Roupa</h3>
+        <p>Acabamento ultrafino e sem costuras grossas para você usar livremente sob vestidos, saias, calças sociais e roupas claras.</p>
       </div>
       <div class="benefit-card">
         <div class="ic">✨</div>
-        <h3>Mais confiança</h3>
-        <p>Ajuda você a se sentir mais segura ao vestir suas roupas favoritas.</p>
+        <h3>Postura Alinhada e Elegante</h3>
+        <p>Sustentação suave na região lombar que valoriza o porte e a elegância, proporcionando mais segurança no dia a dia.</p>
       </div>
       <div class="benefit-card">
         <div class="ic">🕊️</div>
-        <h3>Praticidade</h3>
-        <p>Uma peça prática para diferentes looks.</p>
+        <h3>Tecido Macio e Respirável</h3>
+        <p>Poliamida inteligente hipoalergênica de toque aveludado que não esquenta, não pinica e mantém você fresca o dia inteiro.</p>
       </div>
     </div>
   </div>
@@ -1284,6 +1527,96 @@
       <div class="wear-card">
         <img src="https://raw.githubusercontent.com/edsonhirama/short-cinta-modelador/main/assets/img/Woman_smiling_with_hands_on_202608211107.webp" alt="Short Cinta Modelador em looks casuais" width="1024" height="1024" loading="lazy" decoding="async">
         <span class="tag">Looks casuais</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIZE GUIDE (TABELA OFICIAL DE MEDIDAS) ============ -->
+<section class="section size-guide-section">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Guia oficial de medidas</span>
+      <h2 class="section-title">Como escolher o seu tamanho perfeito</h2>
+      <p class="section-sub">O tecido inteligente com alta elasticidade anatômica se molda perfeitamente ao seu corpo do 38 ao 56.</p>
+    </div>
+
+    <div class="size-table-card">
+      <div class="size-table-responsive">
+        <table class="size-table">
+          <thead>
+            <tr>
+              <th>Tamanho</th>
+              <th>Manequim</th>
+              <th>Cintura (cm)</th>
+              <th>Quadril (cm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="size-badge">P</span></td>
+              <td><strong>38 - 40</strong></td>
+              <td>64 a 74 cm</td>
+              <td>88 a 98 cm</td>
+            </tr>
+            <tr>
+              <td><span class="size-badge">M</span></td>
+              <td><strong>42 - 44</strong></td>
+              <td>74 a 84 cm</td>
+              <td>98 a 108 cm</td>
+            </tr>
+            <tr>
+              <td><span class="size-badge">G</span></td>
+              <td><strong>46 - 48</strong></td>
+              <td>84 a 94 cm</td>
+              <td>108 a 118 cm</td>
+            </tr>
+            <tr>
+              <td><span class="size-badge">GG</span></td>
+              <td><strong>50 - 52</strong></td>
+              <td>94 a 106 cm</td>
+              <td>118 a 128 cm</td>
+            </tr>
+            <tr>
+              <td><span class="size-badge" style="background:#EAF7F0;color:var(--green);">Plus / XG</span></td>
+              <td><strong>54 - 56</strong></td>
+              <td>106 a 120 cm</td>
+              <td>128 a 142 cm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="size-recommend-box">
+        <span>💡</span>
+        <div><strong>Dica de Especialista:</strong> Se você estiver em dúvida entre dois tamanhos, recomendamos escolher o tamanho maior para ter máximo conforto e ajuste anatômico no dia a dia.</div>
+      </div>
+
+      <div class="size-recommend-box" style="background:#EBF5FB;border-color:#AED6F1;color:#1B4F72;margin-top:12px;">
+        <span>🛍️</span>
+        <div><strong>Onde escolher:</strong> Você seleciona o seu tamanho exato (38 ao 56) e as cores preferidas (Preto ou Nude) diretamente na próxima etapa (checkout oficial de entrega).</div>
+      </div>
+
+      <div class="size-tips-grid">
+        <div class="size-tip-item">
+          <div class="icon">📏</div>
+          <div>
+            <h4>Como medir sua cintura</h4>
+            <p>Passe a fita métrica na altura do umbigo sem apertar. Mantenha a postura reta e relaxada.</p>
+          </div>
+        </div>
+        <div class="size-tip-item">
+          <div class="icon">🛡️</div>
+          <div>
+            <h4>Troca Grátis Garantida</h4>
+            <p>Se não servir com perfeição, trocamos para você gratuitamente em até 7 dias sem qualquer complicação.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="center mt-28">
+        <a class="btn btn-gold" href="#ofertas">Escolher Meu Tamanho e Aproveitar a Oferta</a>
+        <div class="btn-cta-line"><span>Kits a partir de R$ 119,90</span><span>•</span><span>Frete grátis</span><span>•</span><span>Pague na entrega</span></div>
       </div>
     </div>
   </div>
@@ -1333,18 +1666,18 @@
 </section>
 
 <!-- ============ MAIN OFFER (3 KITS DE OFERTAS) ============ -->
-<section class="section offer-main" id="ofertas">
+<section class="section offer-main" id="ofertas" aria-labelledby="offer-heading">
   <div class="container">
     <div class="center">
       <div class="urgency-bar">⏰ <strong>Lote Promocional com Frete Grátis:</strong> Restam poucas unidades para envio hoje.</div>
       <span class="eyebrow eyebrow-light">Escolha o seu Kit</span>
-      <h2 class="section-title" style="color:#fff;">Selecione a melhor opção para você</h2>
+      <h2 id="offer-heading" class="section-title" style="color:#fff;">Selecione a melhor opção para você</h2>
       <p class="section-sub" style="color:#F3DCE6;">Aproveite o Frete Grátis e pague somente no momento da entrega.</p>
     </div>
 
     <div class="kits-grid">
-      <!-- KIT 1: 1 UNIDADE (O ENXUTO) -->
-      <div class="kit-card">
+      <!-- KIT 1: 1 UNIDADE (O ENXUTO / ÂNCORA DE ENTRADA) -->
+      <article class="kit-card" aria-label="Kit 1 Unidade - Opção Individual">
         <div class="kit-title">1 Unidade</div>
         <div class="kit-subtitle">Opção Individual</div>
 
@@ -1367,18 +1700,18 @@
 
         <ul class="kit-features">
           <li><span class="check">✓</span> <span><strong>1 Short Cinta Modelador</strong></span></li>
-          <li><span class="check">✓</span> <span>Tamanho à sua escolha (38 ao 56)</span></li>
+          <li><span class="check">✓</span> <span><strong>Escolha tamanho (38 ao 56) e cor no checkout</strong></span></li>
           <li><span class="check">✓</span> <span>4 Barbatanas Estruturais</span></li>
           <li><span class="check">✓</span> <span>Frete Grátis para todo Brasil</span></li>
           <li><span class="check">✓</span> <span>Pagamento somente na entrega</span></li>
         </ul>
 
-        <a class="btn" href="https://entrega.logzz.com.br/pay/memq4ed3r/01---oficial-entrega-garantida" rel="noopener">Pedir com Frete Grátis</a>
+        <a class="btn" href="https://entrega.logzz.com.br/pay/memq4ed3r/01---oficial-entrega-garantida" rel="noopener">Pedir 1 Unidade com Frete Grátis</a>
         <div class="kit-subtext">Frete grátis • Pague na entrega</div>
-      </div>
+      </article>
 
-      <!-- KIT 2: 2 UNIDADES (O ALVO / MAIS VENDIDO) -->
-      <div class="kit-card kit-card--featured">
+      <!-- KIT 2: 2 UNIDADES (O ALVO / CAMPEÃO DE VENDAS) -->
+      <article class="kit-card kit-card--featured" aria-label="Kit 2 Unidades - Compre 1 e Leve 2 Mais Vendido">
         <div class="kit-badge">🔥 Mais Popular • Campeão de Vendas</div>
         <div class="kit-title" style="color:var(--gold-light);">Compre 1 e Leve 2</div>
         <div class="kit-subtitle">2 Unidades • Melhor Custo-Benefício</div>
@@ -1386,7 +1719,8 @@
         <div class="kit-price-box" style="border-color:rgba(201,162,39,.35);background:rgba(255,255,255,.12);">
           <div class="kit-price-old">De R$ 239,80</div>
           <div class="kit-price-now gold">R$ 159,90</div>
-          <div class="kit-unit-price" style="color:#F7E3B2;font-weight:800;">Apenas R$ 79,95/un • Economize R$ 79,80!</div>
+          <div class="kit-unit-price" style="color:#F7E3B2;font-weight:800;">Apenas R$ 79,95 por unidade!</div>
+          <span class="kit-save-pill">✓ ECONOMIZE R$ 79,90</span>
         </div>
 
         <div class="kit-colors">
@@ -1402,18 +1736,18 @@
 
         <ul class="kit-features">
           <li><span class="check" style="color:var(--gold);">✓</span> <span><strong>2 Short Cinta Modelador</strong></span></li>
-          <li><span class="check" style="color:var(--gold);">✓</span> <span>Tamanhos e cores à sua escolha (38 ao 56)</span></li>
+          <li><span class="check" style="color:var(--gold);">✓</span> <span><strong>Escolha tamanhos (38 ao 56) e cores no checkout</strong></span></li>
           <li><span class="check" style="color:var(--gold);">✓</span> <span>4 Barbatanas Estruturais</span></li>
           <li><span class="check" style="color:var(--gold);">✓</span> <span><strong>Frete Grátis com Prioridade</strong></span></li>
           <li><span class="check" style="color:var(--gold);">✓</span> <span>Pagamento somente na entrega</span></li>
         </ul>
 
-        <a class="btn btn-gold" href="https://entrega.logzz.com.br/pay/memq4ed3r/02---oficial-entrega-garantida" rel="noopener">Quero o Mais Vendido</a>
-        <div class="kit-subtext" style="color:#F7E3B2;">Economia de R$ 79,90 • Pague na entrega</div>
-      </div>
+        <a class="btn btn-gold" href="https://entrega.logzz.com.br/pay/memq4ed3r/02---oficial-entrega-garantida" rel="noopener">Quero o Mais Vendido (Leve 2)</a>
+        <div class="kit-subtext" style="color:#F7E3B2;">⭐ Escolha de 87% das clientes • Pague na entrega</div>
+      </article>
 
       <!-- KIT 3: 3 UNIDADES (A ÂNCORA / MÁXIMO DESCONTO) -->
-      <div class="kit-card">
+      <article class="kit-card" aria-label="Kit 3 Unidades - Família Máximo Desconto">
         <div class="kit-badge kit-badge--anchor">👑 Máximo Desconto</div>
         <div class="kit-title">3 Unidades</div>
         <div class="kit-subtitle">Kit Família • Maior Economia</div>
@@ -1421,7 +1755,8 @@
         <div class="kit-price-box">
           <div class="kit-price-old">De R$ 359,70</div>
           <div class="kit-price-now">R$ 229,90</div>
-          <div class="kit-unit-price" style="color:#A8E0C0;font-weight:800;">Apenas R$ 76,63/un • Economize R$ 129,80!</div>
+          <div class="kit-unit-price" style="color:#A8E0C0;font-weight:800;">Apenas R$ 76,63 por unidade!</div>
+          <span class="kit-save-pill">✓ ECONOMIZE R$ 129,80</span>
         </div>
 
         <div class="kit-colors">
@@ -1437,14 +1772,39 @@
 
         <ul class="kit-features">
           <li><span class="check">✓</span> <span><strong>3 Short Cinta Modelador</strong></span></li>
-          <li><span class="check">✓</span> <span>Tamanhos e cores à sua escolha (38 ao 56)</span></li>
+          <li><span class="check">✓</span> <span><strong>Escolha tamanhos (38 ao 56) e cores no checkout</strong></span></li>
           <li><span class="check">✓</span> <span>4 Barbatanas Estruturais</span></li>
           <li><span class="check">✓</span> <span>Frete Grátis com Prioridade</span></li>
           <li><span class="check">✓</span> <span>Pagamento somente na entrega</span></li>
         </ul>
 
-        <a class="btn" href="https://entrega.logzz.com.br/pay/memq4ed3r/03-cinta-oficial" rel="noopener">Quero Máximo Desconto</a>
+        <a class="btn" href="https://entrega.logzz.com.br/pay/memq4ed3r/03-cinta-oficial" rel="noopener">Quero Máximo Desconto (3 Unidades)</a>
         <div class="kit-subtext">Economia de R$ 129,80 • Pague na entrega</div>
+      </article>
+    </div>
+
+    <!-- FAIXA DE GARANTIAS & CONFIANÇA DO CHECKOUT -->
+    <div class="offer-trust-grid">
+      <div class="offer-trust-item">
+        <div class="ot-icon">🚚</div>
+        <div>
+          <div class="ot-title">Frete Grátis Brasil</div>
+          <div class="ot-desc">Envio rápido com rastreamento em 3 a 5 dias úteis</div>
+        </div>
+      </div>
+      <div class="offer-trust-item">
+        <div class="ot-icon">🛡️</div>
+        <div>
+          <div class="ot-title">Pague Somente na Entrega</div>
+          <div class="ot-desc">Zero risco: você só paga quando receber o pacote</div>
+        </div>
+      </div>
+      <div class="offer-trust-item">
+        <div class="ot-icon">💯</div>
+        <div>
+          <div class="ot-title">7 Dias de Garantia Total</div>
+          <div class="ot-desc">Se não gostar, devolva grátis e receba 100% de volta</div>
+        </div>
       </div>
     </div>
   </div>
