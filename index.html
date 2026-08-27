@@ -379,36 +379,163 @@
     padding:7px 14px;border-radius:999px;backdrop-filter:blur(3px);
   }
 
-  /* ================= SECTION: MAIN OFFER ================= */
+  /* ================= SECTION: MAIN OFFER (3 KITS) ================= */
   .offer-main{
     background:
       radial-gradient(900px 500px at 15% 0%, rgba(201,162,39,.18), transparent 55%),
       linear-gradient(135deg,var(--plum-dark) 0%,#5A1B3C 55%,var(--plum) 100%);
     color:#fff;position:relative;overflow:hidden;
   }
-  .offer-box{
-    max-width:760px;margin:0 auto;background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.18);border-radius:28px;
-    padding:clamp(28px,5vw,48px);text-align:center;
-    backdrop-filter:blur(4px);
+  .kits-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:24px;
+    align-items:stretch;
+    margin-top:36px;
   }
-  .offer-box .combo{font-size:clamp(28px,6vw,52px);font-weight:800;}
-  .offer-box .combo-sub{font-size:clamp(18px,3.4vw,26px);color:#F7E3B2;margin:6px 0 24px;}
-  .offer-rows{display:grid;gap:12px;max-width:440px;margin:0 auto 26px;}
-  .offer-row{
-    display:flex;justify-content:space-between;align-items:center;gap:12px;
-    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);
-    border-radius:14px;padding:14px 20px;font-size:clamp(14px,2.4vw,17px);font-weight:600;
+  .kit-card{
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:24px;
+    padding:34px 20px 28px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    backdrop-filter:blur(6px);
+    transition:transform .2s ease, box-shadow .2s ease;
   }
-  .offer-row .k{color:#F3DCE6;}
-  .offer-row .v{color:#fff;font-weight:800;text-align:right;}
-  .offer-row .v.gold{color:var(--gold-light);}
-  .offer-pay{
-    display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;
-    background:linear-gradient(135deg,#E8F7EF,#DFF3E9);
-    border:1px solid #9FD8B6;color:var(--green);
-    font-weight:800;font-size:clamp(15px,2.6vw,19px);letter-spacing:.5px;text-transform:uppercase;
-    border-radius:14px;padding:16px 20px;margin-bottom:28px;
+  .kit-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+  }
+  .kit-card--featured{
+    background:rgba(255,255,255,.13);
+    border:2px solid var(--gold);
+    box-shadow:0 16px 44px rgba(201,162,39,.25);
+    transform:scale(1.03);
+    z-index:2;
+  }
+  .kit-card--featured:hover{
+    transform:scale(1.05) translateY(-4px);
+    box-shadow:0 24px 50px rgba(201,162,39,.35);
+  }
+  .kit-badge{
+    position:absolute;
+    top:-13px;
+    left:50%;
+    transform:translateX(-50%);
+    background:linear-gradient(135deg,#E3C25A 0%,#C9A227 100%);
+    color:var(--plum-dark);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    padding:6px 14px;
+    border-radius:999px;
+    box-shadow:0 6px 16px rgba(0,0,0,.3);
+    white-space:nowrap;
+  }
+  .kit-badge--anchor{
+    background:linear-gradient(135deg,#D96A8B 0%,#B23A63 100%);
+    color:#fff;
+  }
+  .kit-title{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(22px,2.8vw,28px);
+    font-weight:800;
+    color:#fff;
+    margin-bottom:4px;
+  }
+  .kit-subtitle{
+    font-size:13px;
+    color:#F7E3B2;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:16px;
+  }
+  .kit-price-box{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:16px;
+    padding:16px 12px;
+    margin-bottom:18px;
+  }
+  .kit-price-old{
+    font-size:13px;
+    color:#D9BFCA;
+    text-decoration:line-through;
+    margin-bottom:2px;
+  }
+  .kit-price-now{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(26px,3.4vw,34px);
+    font-weight:800;
+    color:#fff;
+    line-height:1.1;
+  }
+  .kit-price-now.gold{
+    color:var(--gold-light);
+  }
+  .kit-unit-price{
+    font-size:12px;
+    font-weight:700;
+    color:#A8E0C0;
+    margin-top:4px;
+  }
+  .kit-features{
+    list-style:none;
+    text-align:left;
+    margin-bottom:22px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    font-size:13px;
+    color:#F3DCE6;
+  }
+  .kit-features li{
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .kit-features li .check{
+    color:var(--gold-light);
+    font-weight:800;
+    font-size:14px;
+    flex:none;
+  }
+  .kit-features li strong{
+    color:#fff;
+  }
+  .kit-pay-tag{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    background:rgba(31,122,77,.25);
+    border:1px solid #1F7A4D;
+    color:#A8E0C0;
+    font-size:11px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.8px;
+    padding:6px 12px;
+    border-radius:999px;
+    margin-bottom:18px;
+  }
+  .kit-card .btn{
+    width:100%;
+    padding:16px 18px;
+    font-size:15px;
+    margin-top:auto;
+    border-radius:999px;
+  }
+  .kit-subtext{
+    font-size:11px;
+    font-weight:700;
+    color:#D9BFCA;
+    margin-top:10px;
   }
 
   /* ================= SECTION: OBJECTIONS ================= */
@@ -561,6 +688,9 @@
     .strip-grid{grid-template-columns:1fr 1fr;}
     .pay-steps,.how-steps{grid-template-columns:1fr;}
     .barb-cards,.benefit-grid,.wear-grid{grid-template-columns:1fr 1fr;}
+    .kits-grid{grid-template-columns:1fr;max-width:440px;margin:32px auto 0;gap:32px;}
+    .kit-card--featured{transform:none;}
+    .kit-card--featured:hover{transform:translateY(-4px);}
     .hero{padding-top:40px;}
   }
   @media (max-width:640px){
@@ -568,6 +698,7 @@
     .barb-cards,.benefit-grid,.wear-grid{grid-template-columns:1fr;}
     .barb-legend{grid-template-columns:repeat(2,1fr);}
     .obj-check{font-size:15px;}
+    .kits-grid{max-width:100%;}
     body{padding-bottom:86px;}
     .sticky-cta{display:block;}
     .topbar{padding:9px 12px;}
@@ -605,9 +736,9 @@
       </div>
 
       <div class="hero-cta-row">
-        <a class="btn" href="https://entrega.logzz.com.br/pay/memq4ed3r/02---oficial-entrega-garantida" rel="noopener">Quero aproveitar a oferta</a>
+        <a class="btn" href="#ofertas">Quero aproveitar a oferta</a>
         <div class="btn-cta-line">
-          <span>2 unidades</span><span>•</span><span>R$ 159,90</span><span>•</span><span>Frete grátis</span><span>•</span><span>Pagamento na entrega</span>
+          <span>1, 2 ou 3 unidades</span><span>•</span><span>A partir de R$ 119,90</span><span>•</span><span>Frete grátis</span><span>•</span><span>Pagamento na entrega</span>
         </div>
       </div>
     </div>
@@ -636,9 +767,9 @@
       </div>
     </div>
     <div class="mt-28 center">
-      <a class="btn" href="https://entrega.logzz.com.br/pay/memq4ed3r/02---oficial-entrega-garantida" rel="noopener">Quero aproveitar a oferta</a>
+      <a class="btn" href="#ofertas">Quero aproveitar a oferta</a>
       <div class="btn-cta-line">
-        <span>2 unidades</span><span>•</span><span>R$ 159,90</span><span>•</span><span>Frete grátis</span><span>•</span><span>Pagamento na entrega</span>
+        <span>1, 2 ou 3 unidades</span><span>•</span><span>A partir de R$ 119,90</span><span>•</span><span>Frete grátis</span><span>•</span><span>Pagamento na entrega</span>
       </div>
     </div>
   </div>
@@ -699,9 +830,9 @@
 
     <div class="pay-note">
       <h3>Mais tranquilidade para fazer seu pedido</h3>
-      <a class="btn" href="https://entrega.logzz.com.br/pay/memq4ed3r/02---oficial-entrega-garantida" rel="noopener">Quero aproveitar a oferta</a>
+      <a class="btn" href="#ofertas">Ver opções de kits</a>
       <div class="btn-cta-line btn-cta-line-light">
-        <span>2 unidades</span><span>•</span><span>R$ 159,90</span><span>•</span><span>Frete grátis</span><span>•</span><span>Pagamento na entrega</span>
+        <span>1, 2 ou 3 unidades</span><span>•</span><span>A partir de R$ 119,90</span><span>•</span><span>Frete grátis</span><span>•</span><span>Pagamento na entrega</span>
       </div>
     </div>
   </div>
@@ -719,7 +850,7 @@
       <p>Sabe aquela roupa que você gosta, mas gostaria que tivesse um caimento ainda mais bonito? O <strong>Short Cinta Modelador</strong> foi desenvolvido para ajudar a deixar o visual mais alinhado, proporcionando sensação de firmeza e mais confiança ao se vestir.</p>
       <p>Pensado para acompanhar o corpo com elegância e naturalidade, é o tipo de peça que faz diferença no dia a dia e em ocasiões especiais.</p>
       <div class="mt-20">
-        <a class="btn" href="https://entrega.logzz.com.br/pay/memq4ed3r/02---oficial-entrega-garantida" rel="noopener">Garantir minha oferta</a>
+        <a class="btn" href="#ofertas">Garantir minha oferta</a>
         <div class="btn-cta-line"><span>Frete grátis</span><span>•</span><span>Pagamento na entrega</span></div>
       </div>
     </div>
@@ -788,7 +919,7 @@
           </div>
         </div>
         <div class="mt-20">
-          <a class="btn" href="https://entrega.logzz.com.br/pay/memq4ed3r/02---oficial-entrega-garantida" rel="noopener">Quero aproveitar a oferta</a>
+          <a class="btn" href="#ofertas">Quero aproveitar a oferta</a>
           <div class="btn-cta-line"><span>Frete grátis</span><span>•</span><span>Pagamento na entrega</span></div>
         </div>
       </div>
@@ -969,34 +1100,103 @@
       </div>
     </div>
     <div class="center mt-32">
-      <a class="btn" href="https://entrega.logzz.com.br/pay/memq4ed3r/02---oficial-entrega-garantida" rel="noopener">Garantir minha oferta</a>
+      <a class="btn" href="#ofertas">Garantir minha oferta</a>
       <div class="btn-cta-line"><span>Frete grátis</span><span>•</span><span>Pagamento na entrega</span></div>
     </div>
   </div>
 </section>
 
-<!-- ============ MAIN OFFER ============ -->
-<section class="section offer-main">
+<!-- ============ MAIN OFFER (3 KITS DE OFERTAS) ============ -->
+<section class="section offer-main" id="ofertas">
   <div class="container">
-    <div class="offer-box">
-      <span class="eyebrow eyebrow-light">Oferta promocional por tempo limitado</span>
-      <div class="combo">COMPRE 1 E LEVE 2</div>
-      <div class="combo-sub">2 unidades por R$ 159,90</div>
+    <div class="center">
+      <span class="eyebrow eyebrow-light">Escolha o seu Kit</span>
+      <h2 class="section-title" style="color:#fff;">Selecione a melhor opção para você</h2>
+      <p class="section-sub" style="color:#F3DCE6;">Aproveite o Frete Grátis e pague somente no momento da entrega.</p>
+    </div>
 
-      <div class="offer-rows">
-        <div class="offer-row"><span class="k">Você recebe</span><span class="v">2 unidades</span></div>
-        <div class="offer-row"><span class="k">Você paga</span><span class="v gold">R$ 159,90</span></div>
-        <div class="offer-row"><span class="k">Frete</span><span class="v">Grátis</span></div>
+    <div class="kits-grid">
+      <!-- KIT 1: 1 UNIDADE (O ENXUTO) -->
+      <div class="kit-card">
+        <div class="kit-title">1 Unidade</div>
+        <div class="kit-subtitle">Opção Individual</div>
+
+        <div class="kit-price-box">
+          <div class="kit-price-old">De R$ 149,90</div>
+          <div class="kit-price-now">R$ 119,90</div>
+          <div class="kit-unit-price">R$ 119,90 por unidade</div>
+        </div>
+
+        <div class="kit-pay-tag">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12H7"/><path d="M11 8l-4 4 4 4"/><path d="M3 5v14"/></svg>
+          Pague na Entrega
+        </div>
+
+        <ul class="kit-features">
+          <li><span class="check">✓</span> <span><strong>1 Short Cinta Modelador</strong></span></li>
+          <li><span class="check">✓</span> <span>4 Barbatanas Estruturais</span></li>
+          <li><span class="check">✓</span> <span>Frete Grátis para todo Brasil</span></li>
+          <li><span class="check">✓</span> <span>Pagamento somente na entrega</span></li>
+        </ul>
+
+        <a class="btn" href="https://entrega.logzz.com.br/pay/memq4ed3r/01---oficial-entrega-garantida" rel="noopener">Pedir com Frete Grátis</a>
+        <div class="kit-subtext">Frete grátis • Pague na entrega</div>
       </div>
 
-      <div class="offer-pay">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12H7"/><path d="M11 8l-4 4 4 4"/><path d="M3 5v14"/></svg>
-        Pagamento na entrega
+      <!-- KIT 2: 2 UNIDADES (O ALVO / MAIS VENDIDO) -->
+      <div class="kit-card kit-card--featured">
+        <div class="kit-badge">🔥 Mais Popular • Campeão de Vendas</div>
+        <div class="kit-title" style="color:var(--gold-light);">Compre 1 e Leve 2</div>
+        <div class="kit-subtitle">2 Unidades • Melhor Custo-Benefício</div>
+
+        <div class="kit-price-box" style="border-color:rgba(201,162,39,.35);background:rgba(255,255,255,.12);">
+          <div class="kit-price-old">De R$ 239,80</div>
+          <div class="kit-price-now gold">R$ 159,90</div>
+          <div class="kit-unit-price" style="color:#F7E3B2;font-weight:800;">Apenas R$ 79,95 por unidade!</div>
+        </div>
+
+        <div class="kit-pay-tag" style="background:rgba(201,162,39,.2);border-color:var(--gold);color:var(--gold-light);">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12H7"/><path d="M11 8l-4 4 4 4"/><path d="M3 5v14"/></svg>
+          Pague na Entrega
+        </div>
+
+        <ul class="kit-features">
+          <li><span class="check" style="color:var(--gold);">✓</span> <span><strong>2 Short Cinta Modelador</strong></span></li>
+          <li><span class="check" style="color:var(--gold);">✓</span> <span>4 Barbatanas Estruturais</span></li>
+          <li><span class="check" style="color:var(--gold);">✓</span> <span><strong>Frete Grátis com Prioridade</strong></span></li>
+          <li><span class="check" style="color:var(--gold);">✓</span> <span>Pagamento somente na entrega</span></li>
+        </ul>
+
+        <a class="btn btn-gold" href="https://entrega.logzz.com.br/pay/memq4ed3r/02---oficial-entrega-garantida" rel="noopener">Quero o Mais Vendido</a>
+        <div class="kit-subtext" style="color:#F7E3B2;">Economia de R$ 79,90 • Pague na entrega</div>
       </div>
 
-      <a class="btn btn-gold" href="https://entrega.logzz.com.br/pay/memq4ed3r/02---oficial-entrega-garantida" rel="noopener">Quero 2 unidades por R$ 159,90</a>
-      <div class="btn-cta-line btn-cta-line-light">
-        <span>Frete grátis</span><span>•</span><span>Pagamento na entrega</span>
+      <!-- KIT 3: 3 UNIDADES (A ÂNCORA / MÁXIMO DESCONTO) -->
+      <div class="kit-card">
+        <div class="kit-badge kit-badge--anchor">👑 Máximo Desconto</div>
+        <div class="kit-title">3 Unidades</div>
+        <div class="kit-subtitle">Kit Família • Maior Economia</div>
+
+        <div class="kit-price-box">
+          <div class="kit-price-old">De R$ 359,70</div>
+          <div class="kit-price-now">R$ 229,90</div>
+          <div class="kit-unit-price">Apenas R$ 76,63 por unidade!</div>
+        </div>
+
+        <div class="kit-pay-tag">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12H7"/><path d="M11 8l-4 4 4 4"/><path d="M3 5v14"/></svg>
+          Pague na Entrega
+        </div>
+
+        <ul class="kit-features">
+          <li><span class="check">✓</span> <span><strong>3 Short Cinta Modelador</strong></span></li>
+          <li><span class="check">✓</span> <span>4 Barbatanas Estruturais</span></li>
+          <li><span class="check">✓</span> <span>Frete Grátis com Prioridade</span></li>
+          <li><span class="check">✓</span> <span>Pagamento somente na entrega</span></li>
+        </ul>
+
+        <a class="btn" href="https://entrega.logzz.com.br/pay/memq4ed3r/03-cinta-oficial" rel="noopener">Quero Máximo Desconto</a>
+        <div class="kit-subtext">Economia de R$ 129,80 • Pague na entrega</div>
       </div>
     </div>
   </div>
@@ -1019,7 +1219,7 @@
         <div class="obj-check"><span class="ck">✓</span>2 unidades na promoção</div>
       </div>
       <div class="mt-24">
-        <a class="btn" href="https://entrega.logzz.com.br/pay/memq4ed3r/02---oficial-entrega-garantida" rel="noopener">Quero aproveitar a oferta</a>
+        <a class="btn" href="#ofertas">Quero aproveitar a oferta</a>
         <div class="btn-cta-line"><span>Frete grátis</span><span>•</span><span>Pagamento na entrega</span></div>
       </div>
     </div>
@@ -1069,21 +1269,21 @@
           <span>Quantas unidades recebo?</span>
           <span class="pm" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a" id="faq-ans-1" role="region" aria-labelledby="faq-btn-1"><p>Você recebe 2 unidades.</p></div>
+        <div class="faq-a" id="faq-ans-1" role="region" aria-labelledby="faq-btn-1"><p>Você pode escolher entre os kits de 1, 2 ou 3 unidades, com descontos progressivos e frete grátis para todo o Brasil.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" id="faq-btn-2" type="button" aria-expanded="false" aria-controls="faq-ans-2">
           <span>Quanto custa?</span>
           <span class="pm" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a" id="faq-ans-2" role="region" aria-labelledby="faq-btn-2"><p>R$ 159,90.</p></div>
+        <div class="faq-a" id="faq-ans-2" role="region" aria-labelledby="faq-btn-2"><p>Temos opções a partir de R$ 119,90 (1 unidade), R$ 159,90 (2 unidades - Compre 1 Leve 2) e R$ 229,90 (3 unidades - Maior economia com máximo desconto).</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" id="faq-btn-3" type="button" aria-expanded="false" aria-controls="faq-ans-3">
           <span>O frete é grátis?</span>
           <span class="pm" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a" id="faq-ans-3" role="region" aria-labelledby="faq-btn-3"><p>Sim.</p></div>
+        <div class="faq-a" id="faq-ans-3" role="region" aria-labelledby="faq-btn-3"><p>Sim. Todos os kits possuem frete grátis para todo o Brasil.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" id="faq-btn-4" type="button" aria-expanded="false" aria-controls="faq-ans-4">
@@ -1111,7 +1311,7 @@
           <span>Onde faço meu pedido?</span>
           <span class="pm" aria-hidden="true">+</span>
         </button>
-        <div class="faq-a" id="faq-ans-7" role="region" aria-labelledby="faq-btn-7"><p>Clique em qualquer CTA para acessar o checkout oficial.</p></div>
+        <div class="faq-a" id="faq-ans-7" role="region" aria-labelledby="faq-btn-7"><p>Escolha o kit desejado nesta página e clique no botão para acessar o checkout oficial.</p></div>
       </div>
     </div>
   </div>
@@ -1121,22 +1321,21 @@
 <section class="section final-section">
   <div class="container final-box">
     <span class="eyebrow">Última chamada</span>
-    <h2 class="section-title">Pronta para aproveitar sua oferta?</h2>
-    <p class="section-sub">Leve 2 unidades do Short Cinta Modelador por apenas <strong>R$ 159,90</strong>, com frete grátis e pagamento na entrega.</p>
+    <h2 class="section-title">Pronta para escolher sua oferta?</h2>
+    <p class="section-sub">Escolha entre 1, 2 ou 3 unidades do Short Cinta Modelador com <strong>frete grátis</strong> e <strong>pagamento na entrega</strong>.</p>
 
     <div class="final-offer">
-      <span class="final-chip">Compre 1 e Leve 2</span>
-      <span class="final-chip">2 unidades</span>
-      <span class="final-chip">R$ 159,90</span>
+      <span class="final-chip">1, 2 ou 3 unidades</span>
+      <span class="final-chip">A partir de R$ 119,90</span>
       <span class="final-chip frete">Frete grátis</span>
       <span class="final-chip pay">Pagamento na entrega</span>
     </div>
 
-    <p class="final-urgency">Aproveite enquanto esta oferta estiver disponível.</p>
+    <p class="final-urgency">Aproveite enquanto as ofertas promocionais estiverem disponíveis.</p>
 
-    <a class="btn btn-gold" href="https://entrega.logzz.com.br/pay/memq4ed3r/02---oficial-entrega-garantida" rel="noopener">Quero aproveitar minha oferta</a>
+    <a class="btn btn-gold" href="#ofertas">Ver opções de kits</a>
     <div class="btn-cta-line">
-      <span>2 unidades</span><span>•</span><span>R$ 159,90</span><span>•</span><span>Frete grátis</span><span>•</span><span>Pagamento na entrega</span>
+      <span>1, 2 ou 3 unidades</span><span>•</span><span>A partir de R$ 119,90</span><span>•</span><span>Frete grátis</span><span>•</span><span>Pagamento na entrega</span>
     </div>
   </div>
 </section>
@@ -1145,7 +1344,7 @@
 <!-- ============ FOOTER ============ -->
 <footer>
   <div class="ft-title">Short Cinta Modelador</div>
-  <p>Compre 1 e Leve 2 por R$ 159,90, com frete grátis e pagamento na entrega, conforme as condições da oferta.</p>
+  <p>Kits a partir de R$ 119,90, com frete grátis e pagamento na entrega, conforme as condições da oferta.</p>
   <p class="ft-legal">
     Este produto não se destina a diagnosticar, tratar, curar ou prevenir qualquer doença.
     As imagens desta página são ilustrativas. O pagamento acontece na entrega, conforme as condições da oferta.
@@ -1156,10 +1355,10 @@
 <div class="sticky-cta" aria-hidden="true">
   <div class="row">
     <div class="info">
-      <div>2 unidades • R$ 159,90</div>
+      <div>Kits a partir de R$ 119,90</div>
       <div class="hl">Pague na entrega</div>
     </div>
-    <a class="btn" href="https://entrega.logzz.com.br/pay/memq4ed3r/02---oficial-entrega-garantida" rel="noopener">Aproveitar oferta</a>
+    <a class="btn" href="#ofertas">Escolher kit</a>
   </div>
 </div>
 
